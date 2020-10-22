@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import django_heroku
+ 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,15 +25,21 @@ SECRET_KEY = '0ws@@p$izi46_3-_76!q8q##4-+_z(6iyhi0y!rsux#2j_)2tk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mysite.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'aboutus',
+    'portfolios',
+    'services',
+    'contact',
     'webapp',
     'blog',
     'personal',
+    'hire_me',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+ 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,7 +128,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+ 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-django_heroku.settings(locals())
+ 

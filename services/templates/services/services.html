@@ -1,0 +1,136 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="page-title" style="background-image: url(/static/images/page-title.png)">
+    <h1>Services</h1>
+</div>
+ 
+
+<section id="services" class="service-item">
+    <div class="container">
+        <div class="center fadeInDown">
+            <h2>Our Service</h2>
+            <p class="lead">We provide Intelligent Technology solutions, that helping companies implement, innovate and improve business
+                 performance.<br> We have grown our business significantly based upon consistency of execution, professional customer service and integrity.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="{% static 'images/services/ux.svg' %}">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">UI/UX Design</h3>
+                        <p>We use Figma to create well Responsive Desig</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="{% static 'images/services/web.svg' %}">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Web Design</h3>
+                        <p>We use HTML5 & CSS3 to create frontend Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="{% static 'images/services/motion.svg' %}">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Machine Learning</h3>
+                        <p>We use Python for Machine Learning and Data Science </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="{% static 'images/services/mobile-ui.svg' %}">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Ecommerce Site</h3>
+                        <p>We use CMS to build fantastics Ecommerce.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="{% static 'images/services/web-app.svg' %}">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Web Applications</h3>
+                        <p>We use Python Django to build Web Application</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="{% static 'images/services/mobile-ui.svg' %}">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">SEO Marketing</h3>
+                        <p>We are into Digital Marketing such as Email marketing & Social Media</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/.row-->
+    </div>
+    <!--/.container-->
+</section>
+<!--/#services-->
+<!--/#services-->
+
+
+
+
+<section id="partner">
+    <div class="container">
+        <div class="center fadeInDown">
+            <h2>Our Clients</h2>
+            <p class="lead">Our first priority is your need, and the technology is only a means to an end that supports your business growth and success. We aspire to meet your IT and technology needs.</p>
+        </div>
+
+        <div class="partners">
+            <ul>
+                <li>
+                    <a href="https://yunacons.com/"><img class="img-responsive fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="{% static 'images/partners/brand-1.png' %}"></a>
+                </li>
+                <li>
+                    <a href="https://mile12connect.com/"><img class="img-responsive fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="{% static 'images/partners/brand-2.png' %}"></a>
+                </li>
+                <li>
+                    <a href="https://oioprestigelogistics.com/"><img class="img-responsive fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="{% static 'images/partners/brand-3.png' %}"></a>
+                </li>
+                <li>
+                    <a href="http://yusaadedu.com/"><img class="img-responsive fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="{% static 'images/partners/brand-4.png' %}"></a>
+                </li>
+                <li>
+                    <a href="https://waterfieldluxhotel.com/"><img class="img-responsive fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="{% static 'images/partners/brand-5.png' %}"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.container-->
+</section>
+<!--/#partner-->
+
+{% include "personal/includes/footer.html" %}
+{%endblock%}

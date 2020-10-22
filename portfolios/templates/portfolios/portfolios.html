@@ -1,0 +1,129 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="page-title" style="background-image: url(/static/images/page-title.png)">
+    <h1>portfolio</h1>
+</div>
+ 
+
+<section id="portfolio">
+    <div class="container">
+        <div class="center">
+            <h2>Recent work</h2>
+            <p class="lead">We have successfully completed an impressive variety of construction projects.</p>
+        </div>
+
+
+        <ul class="portfolio-filter text-center">
+            <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
+            <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Website Design</a></li>
+            <li><a class="btn btn-default" href="#" data-filter=".html">Ecommerce</a></li>
+            <li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
+        </ul>
+        <!--/#portfolio-filter-->
+
+        <div class="row">
+            <div class="portfolio-items">
+                <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-1.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-1.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-2.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-2.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-3.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-3.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-4.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-4.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-5.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-5.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-1.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-1.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-6.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="{% static 'images/portfolio/item-6.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+
+                <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3 single-work">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="{% static 'images/portfolio/item-2.png' %}" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <a class="preview" href="i{% static 'mages/portfolio/item-2.png' %}" rel="prettyPhoto"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.portfolio-item-->
+            </div>
+        </div>
+    </div>
+</section>
+{% include "personal/includes/footer.html" %}
+{%endblock%}

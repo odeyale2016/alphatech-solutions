@@ -1,0 +1,55 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="page-title" style="background-image: url(/static/images/page-title.png)">
+    <h1>Applications List</h1>
+</div>
+ 
+
+<section id="contact-page">
+    <div class="container">
+        <div class="large-title text-center">        
+            <h2>List of Applications</h2>
+            
+        </div> 
+        <div class="row contact-wrap"> 
+            <table class="table table-bordered">
+                <thead class="border-bottom font-weight-bold">
+                    <tr>
+                        <td>FullName</td>
+                        <td>Mobile</td>
+                        <td>Email</td>
+                        <td>Position</td>
+                        <td>Action</td>
+                        
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {% for application in application_list %}
+                        <tr>
+                            <td>{{application.fullname}}</td>
+                            <td>{{application.phone_number}}</td>
+                            <td>{{application.email}}</td>
+                            <td>{{application.position}}</td>
+                           
+                            <td><a href="{% url 'application_update' application.id %}" class="btn text-secondary px-0"  >
+                                <i class="far fa-edit fa-lg"></i>
+                            </a>
+                        <form action="{% url 'application_delete' application.id %}" method="post" class="d-inline">
+                            <button type="submit" class="btn">
+                                <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                            </button>
+                        </form>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#contact-page-->
+{% include "personal/includes/footer.html" %}
+{%endblock%}

@@ -1,0 +1,55 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="page-title" style="background-image: url(/static/images/page-title.png)">
+    <h1>Hire Me</h1>
+</div>
+ 
+
+<section id="contact-page">
+    <div class="container">
+        <div class="large-title text-center">        
+            <h2>Contact Alphatech Solutions today</h2>
+            <p>I'm availble for any Web Application Project, hire me now.<br>You can add the description of your project in the message box, I will get in touch with you soon.</p>
+        </div> 
+        <div class="row contact-wrap"> 
+            <div class="status alert alert-success" style="display: none"></div>
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
+               {% csrf_token %}
+              
+                <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                        {{form.fullname}}
+                    </div>
+                    <div class="form-group">
+                        {{form.email}}
+                    </div>
+                    <div class="form-group">
+                        {{form.phone_number}}
+                    </div>
+                    <div class="form-group">
+                        {{form.company_name}}
+                    </div>                        
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        {{form.subject}}
+                    </div>
+                    <div class="form-group">
+                        {{form.message}}
+                    </div>    
+                    <div class="form-group">
+                        {{form.position}}
+                    </div>                        
+                    <div class="form-group">
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit </button>
+                    </div>
+                </div>
+            </form> 
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#contact-page-->
+{% include "personal/includes/footer.html" %}
+{%endblock%}
