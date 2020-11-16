@@ -25,7 +25,7 @@ SECRET_KEY = '0ws@@p$izi46_3-_76!q8q##4-+_z(6iyhi0y!rsux#2j_)2tk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mysite.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'alphatech-solutions.herokuapp.com']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'blog',
     'personal',
     'hire_me',
+    'polls',
     
     'django.contrib.admin',
     'django.contrib.auth',

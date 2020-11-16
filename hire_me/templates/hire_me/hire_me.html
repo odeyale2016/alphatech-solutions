@@ -16,38 +16,67 @@
         </div> 
         <div class="row contact-wrap"> 
             <div class="status alert alert-success" style="display: none"></div>
-            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
-               {% csrf_token %}
-              
-                <div class="col-sm-5 col-sm-offset-1">
-                    <div class="form-group">
-                        {{form.fullname}}
-                    </div>
-                    <div class="form-group">
-                        {{form.email}}
-                    </div>
-                    <div class="form-group">
-                        {{form.phone_number}}
-                    </div>
-                    <div class="form-group">
-                        {{form.company_name}}
-                    </div>                        
-                </div>
-                <div class="col-sm-5">
-                    <div class="form-group">
-                        {{form.subject}}
-                    </div>
-                    <div class="form-group">
-                        {{form.message}}
-                    </div>    
-                    <div class="form-group">
-                        {{form.position}}
-                    </div>                        
-                    <div class="form-group">
-                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit </button>
-                    </div>
-                </div>
-            </form> 
+
+            <form action="" method="post">
+                {% csrf_token %}
+             
+            <div class="form-check">
+                <label for="fullname">Fullname: </label>
+                <input
+                    type="text"
+                    name="fullname"
+                    class="form-check-input"
+                    
+                />
+                
+             
+                <label for="Email">Email: </label>
+                <input
+                    type="email"
+                    name="email"
+                    class="form-check-input"
+                    
+                />
+                
+            </div>
+
+            <div class="form-check">
+                <label for="company_name">Company: </label>
+                <input
+                    type="text"
+                    name="company_name"
+                    class="form-check-input"
+                    
+                />
+                
+             
+                <label for="Subject">Subject: </label>
+                <input
+                    type="text"
+                    name="text"
+                    class="form-check-input"
+                    
+                />
+                
+            </div>
+            <div class="form-check">
+                <label for="message">Message: </label>
+                <textarea
+                    
+                    name="message">
+                     
+                    
+                </textarea>
+
+                <label for="message">Position: </label>
+                <select name="position">
+                    {% for user in users %}
+                    <option>{{user.title}}</option>
+                    {% endfor %}
+                </select>   
+            </div>
+            <input type="submit" value="Submit" class="btn btn-success btn-md mt-4">
+            </form>
         </div><!--/.row-->
     </div><!--/.container-->
 </section><!--/#contact-page-->

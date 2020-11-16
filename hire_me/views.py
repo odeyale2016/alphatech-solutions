@@ -1,11 +1,12 @@
 from django.shortcuts import render
 
 from .forms import ApplicationForm
-from .models import  Registerdb
+from .models import  Registerdb, Position
 
 def applications_create(request):
     if request.method=='GET':
         form = ApplicationForm()
+        users = Registerdb.objects.all()
         return render(request, "hire_me/hire_me.html",{'form' : form})
     else:
         form = ApplicationForm(request.POST)
